@@ -20,7 +20,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold flex items-center space-x-2 text-white hover:text-amber-300 transition duration-300">
             <img
-              src="/images/UP Logo with Blue and Gray Color Palette (300 x 200 px).svg"
+              src="/images/UP Logo with Blue and White Color Palette (300 x 200 px).svg"
               alt="Ummed Prajapat Logo"
               className="h-14 w-auto shadow-2xl"
             />
