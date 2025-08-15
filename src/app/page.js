@@ -1,7 +1,10 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaInstagram, FaTimes } from 'react-icons/fa';
+import { TabItem, Tabs } from "flowbite-react";
+import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,7 +83,7 @@ export default function Header() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Hi, I am [Ummed]</h1>
             <p className="text-xl md:text-2xl mb-6">I am a Mern Stack Web Developer with a passion for building scalable and efficient web applications.</p>
             <Link
-              href="/projects"
+              href={"/projects"}
               className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-blue-100 transition duration-300"
             >
               View My Work
@@ -99,9 +102,92 @@ export default function Header() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">About Me</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              I am a [   ummed ] with experience in building modern web applications using technologies like React, Next.js, and Tailwind CSS. I love creating user-friendly and visually appealing websites. [Add more about your background or passion.]
-            </p>
+            <Tabs aria-label="Tabs with icons" className='text-black max-w-[1320px] mx-auto' variant="underline">
+              <TabItem active title="Profile" className='cursor-pointer' icon={HiUserCircle}>
+                <section className="bg-gray-900 text-white py-12 px-6 md:px-16">
+                  <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
+
+                    {/* Profile Image */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src="/images/profileImg.jpg" // apni image ka path yahan dalna
+                        alt="Profile"
+                        className="w-40 h-40 md:w-[250px] md:h-[250px] object-cover rounded-full border-4 border-amber-500 shadow-lg"
+                      />
+                    </div>
+
+                    {/* Profile Content */}
+                    <div>
+                      {/* Name & Title */}
+                      <h1 className="text-3xl md:text-4xl font-bold">Ummed prajapat</h1>
+                      <p className="text-amber-400 text-lg md:text-xl mt-1">Full Stack (Mern Stack) Web Developer, Canva Pro</p>
+
+                      {/* About */}
+                      <p className="text-gray-300 mt-4 leading-relaxed max-w-xl">
+                        I’m a passionate developer specializing in building modern, responsive, and user-friendly web applications.
+                        My focus is on crafting clean and efficient code while delivering engaging digital experiences.
+                      </p>
+
+                      {/* Skills */}
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {["React", "Next.js", "Node.js", "Tailwind CSS", "MongoDB"].map((skill, idx) => (
+                          <span
+                            key={idx}
+                            className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm font-medium"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Buttons */}
+                      <div className="mt-6 flex flex-wrap gap-4">
+                        <a
+                          href="/resume/ummedResume.pdf"
+                          download
+                          className="bg-amber-500 text-gray-900 px-5 py-2 rounded-full font-semibold hover:bg-amber-400 transition"
+                        >
+                          Download CV
+                        </a>
+                        <a
+                          href="#contact"
+                          className="border border-amber-500 text-amber-400 px-5 py-2 rounded-full font-semibold hover:bg-amber-500 hover:text-gray-900 transition"
+                        >
+                          Contact Me
+                        </a>
+                      </div>
+
+                      {/* Social Links */}
+                      <div className="mt-6 flex gap-5 text-2xl">
+                        <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                          <FaLinkedin />
+                        </a>
+                        <a href="https://github.com/ummed850" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                          <FaGithub />
+                        </a>
+                        <a href="https://x.com/KumarUmmed6343" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                          <FaTwitter />
+                        </a>
+                        <a href="https://www.instagram.com/ummed.prajapat1/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                          < FaInstagram />
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </TabItem>
+              <TabItem title="Skills" className='cursor-pointer' icon={HiAdjustments}>
+                This is <span className="font-medium text-black dark:text-white">Settings associated content</span>.
+                Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
+                control the content visibility and styling.
+              </TabItem>
+              <TabItem title="Contacts" className='cursor-pointer' icon={HiClipboardList}>
+                This is <span className="font-medium text-black dark:text-white">Contacts associated content</span>.
+                Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
+                control the content visibility and styling.
+              </TabItem>
+            </Tabs>
           </div>
         </section>
 
