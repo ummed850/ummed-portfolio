@@ -105,7 +105,7 @@ export default function Header() {
             <Tabs aria-label="Tabs with icons" className='text-black max-w-[1320px] mx-auto' variant="underline">
               <TabItem active title="Profile" className='cursor-pointer' icon={HiUserCircle}>
                 <section className="bg-gray-900 text-white py-12 px-6 md:px-16">
-                  <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
+                  <div className="max-w-5xl text-center md:text-left mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
 
                     {/* Profile Image */}
                     <div className="flex-shrink-0">
@@ -129,11 +129,11 @@ export default function Header() {
                       </p>
 
                       {/* Skills */}
-                      <div className="mt-5 flex flex-wrap gap-2">
+                      <div className="mt-5 flex flex-wrap gap-2 inline-block text-center">
                         {["React", "Next.js", "Node.js", "Tailwind CSS", "MongoDB"].map((skill, idx) => (
                           <span
                             key={idx}
-                            className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm font-medium"
+                            className="bg-amber-500/20 text-amber-400 px-3 py-1 mx-1 rounded-full text-sm font-medium"
                           >
                             {skill}
                           </span>
@@ -141,7 +141,7 @@ export default function Header() {
                       </div>
 
                       {/* Buttons */}
-                      <div className="mt-6 flex flex-wrap gap-4">
+                      <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
                         <a
                           href="/resume/ummedResume.pdf"
                           download
@@ -158,7 +158,7 @@ export default function Header() {
                       </div>
 
                       {/* Social Links */}
-                      <div className="mt-6 flex gap-5 text-2xl">
+                      <div className="mt-6 flex gap-5 text-2xl md:justify-start justify-center">
                         <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
                           <FaLinkedin />
                         </a>
