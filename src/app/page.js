@@ -3,7 +3,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaInstagram, FaTimes } from 'react-icons/fa';
 import { TabItem, Tabs } from "flowbite-react";
-import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
+import { HiClipboardList, HiUserCircle } from "react-icons/hi";
+import { GiSkills } from "react-icons/gi";
+
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Header() {
@@ -79,15 +81,8 @@ export default function Header() {
       <main className="bg-gray-100 min-h-screen">
         {/* Hero Section */}
         <section className=" text-white text-center grid grid-cols-1 md:grid-cols-[70%_auto]">
-          <div className=" border border-black py-14 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Hi, I am [Ummed]</h1>
-            <p className="text-xl md:text-2xl mb-6">I am a Mern Stack Web Developer with a passion for building scalable and efficient web applications.</p>
-            <Link
-              href={"/projects"}
-              className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-blue-100 transition duration-300"
-            >
-              View My Work
-            </Link>
+          <div className=" border border-black py-4 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto px-2">
+            <img src='/images/banner1.png' className='h-[400px] w-[1080px]' />
           </div>
           <div>
             <img
@@ -124,7 +119,7 @@ export default function Header() {
 
                       {/* About */}
                       <p className="text-gray-300 mt-4 leading-relaxed max-w-xl">
-                        I’m a passionate developer specializing in building modern, responsive, and user-friendly web applications.
+                        I am a passionate developer specializing in building modern, responsive, and user-friendly web applications.
                         My focus is on crafting clean and efficient code while delivering engaging digital experiences.
                       </p>
 
@@ -177,15 +172,110 @@ export default function Header() {
                   </div>
                 </section>
               </TabItem>
-              <TabItem title="Skills" className='cursor-pointer' icon={HiAdjustments}>
-                This is <span className="font-medium text-black dark:text-white">Settings associated content</span>.
-                Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-                control the content visibility and styling.
+              <TabItem title="Skills" className='cursor-pointer' icon={GiSkills}>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4 bg-gray-900 text-white p-4 rounded-lg">
+                  {[
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript (ES6+)",
+                    "React.js",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Tailwind CSS",
+                    "Bootstrap",
+                    "jQuery",
+                    "Git & GitHub",
+                    "RESTful APIs",
+                    "Responsive Design",
+                    "Next.js",
+                    "Redux",
+                    "canva",
+                    "basic Python",
+                    "basic C++",
+                    "basic C",
+                    "basic Java",
+                  ].map((skill, index) => (
+                    <div
+                      key={index}
+                      className="px-4 py-2 text-center bg-white border border-gray-200 rounded-lg shadow-sm text-gray-700 font-medium hover:bg-amber-50 hover:border-amber-300 transition duration-200"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+
+                <TabItem title="Education ">
+                  <div className="mt-4 space-y-3">
+                    <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        Bachelor of Computer Applications (BCA)
+                      </h3>
+                      <p className="text-gray-600">JNVU University — Ongoing (4th Semester Completed)</p>
+                      <p className="text-sm text-gray-500">Expected Graduation: 2026</p>
+                    </div>
+                  </div>
+                </TabItem>
+
+                <TabItem title="Certificates">
+                  <div className="mt-4 space-y-3">
+                    <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        MERN Stack Web Development
+                      </h3>
+                      <p className="text-gray-600">WsCube Tech — Feb 2025 to Jun 2025</p>
+                      <p className="text-sm text-gray-500">
+                        Covered MongoDB, Express.js, React.js, and Node.js with hands-on project work.
+                      </p>
+                    </div>
+                  </div>
+                </TabItem>
               </TabItem>
               <TabItem title="Contacts" className='cursor-pointer' icon={HiClipboardList}>
-                This is <span className="font-medium text-black dark:text-white">Contacts associated content</span>.
-                Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-                control the content visibility and styling.
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {/* Phone */}
+                  <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+                    <span className="text-amber-500 text-2xl">📞</span>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500">Phone</h4>
+                      <p className="text-gray-800 font-medium">+91 9216940489</p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+                    <span className="text-amber-500 text-2xl">✉️</span>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500">Email</h4>
+                      <p className="text-gray-800 font-medium">ummedprajapat0987@gmail.com</p>
+                    </div>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+                    <span className="text-amber-500 text-2xl">📍</span>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500">Location</h4>
+                      <p className="text-gray-800 font-medium">Jodhpur, Rajasthan, India</p>
+                    </div>
+                  </div>
+
+                  {/* Website */}
+                  <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+                    <span className="text-amber-500 text-2xl">🌐</span>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500">Portfolio</h4>
+                      <a
+                        href="https://ummed-portfolio.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-amber-600 font-medium hover:underline"
+                      >
+                        https://ummed-portfolio.vercel.app/
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </TabItem>
             </Tabs>
           </div>
@@ -309,16 +399,52 @@ export default function Header() {
       </main >
 
       {/* Footer */}
-      < footer className="bg-gray-900 text-white py-6" >
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} [Ummed Prajapat] All rights reserved.</p>
-          <div className="mt-4 space-x-4">
-            <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" className="hover:text-blue-400">LinkedIn</a>
-            <a href="https://github.com" className="hover:text-blue-400">GitHub</a>
-            <a href="mailto:your.email@example.com" className="hover:text-blue-400">Email</a>
+      <footer className="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          {/* About Section */}
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Ummed Prajapat</h2>
+            <p className="text-sm leading-relaxed">
+              MERN Stack Web Developer passionate about building modern, scalable,
+              and user-friendly web applications. I enjoy problem-solving and
+              continuously learning new technologies.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#skills" className="hover:text-amber-400 transition">Skills</a></li>
+              <li><a href="#projects" className="hover:text-amber-400 transition">Projects</a></li>
+              <li><a href="#contact" className="hover:text-amber-400 transition">Contact</a></li>
+              <li><a href="#resume" className="hover:text-amber-400 transition">Resume</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
+            <ul className="space-y-2 text-sm">
+              <li>📞 +91 9216940489</li>
+              <li>✉️ ummedprajapat0987@gmail.com</li>
+              <li>📍 Jodhpur, Rajasthan, India</li>
+            </ul>
+            {/* Social Icons */}
+            <div className="flex space-x-4 mt-4">
+              <a href="https://github.com/ummed850" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl">🐙</a>
+              <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl">💼</a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl">🐦</a>
+            </div>
           </div>
         </div>
-      </footer >
+
+        {/* Bottom Line */}
+        <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} Ummed Prajapat. All Rights Reserved.
+        </div>
+      </footer>
 
     </>
 
@@ -354,51 +480,4 @@ export default function Header() {
 
 
 
-// "use client";
-// import { useState } from "react";
-// import Link from "next/link";
-// import { Menu, X } from "lucide-react";
 
-// export default function Header() {
-//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-//   return (
-//     <header className="sticky top-0 z-50 bg-white shadow-md">
-//       <div className="container mx-auto px-4 flex items-center justify-between py-3">
-//         {/* Logo */}
-// <Link href="/" className="flex items-center space-x-2">
-//   <img
-//     src="/images/Consulting Firm Logo - Ummed Prajapat (2).svg"
-//     alt="Ummed Prajapat Logo"
-//     className="h-10 w-auto"
-//   />
-//   <span className="font-bold text-lg text-gray-800">Ummed Prajapat</span>
-// </Link>
-
-//         {/* Desktop Menu */}
-//         <nav className="hidden md:flex space-x-8">
-//           <Link href="#about" className="text-gray-600 hover:text-black font-medium">About</Link>
-//           <Link href="#projects" className="text-gray-600 hover:text-black font-medium">Projects</Link>
-//           <Link href="#contact" className="text-gray-600 hover:text-black font-medium">Contact</Link>
-//         </nav>
-
-//         {/* Mobile Menu Button */}
-//         <button
-//           className="md:hidden focus:outline-none"
-//           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-//         >
-//           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {mobileMenuOpen && (
-//         <div className="md:hidden bg-white shadow-md px-4 py-4 space-y-4">
-//           <Link href="#about" className="block text-gray-700 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
-//           <Link href="#projects" className="block text-gray-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
-//           <Link href="#contact" className="block text-gray-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-//         </div>
-//       )}
-//     </header>
-//   );
-// }
