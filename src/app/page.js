@@ -53,22 +53,22 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/about"
+            <a
+              href="#about"
               className="hover:text-blue-400 transition duration-300"
               onClick={() => setIsOpen(false)}
             >
               About
-            </Link>
-            <Link
-              href="/projects"
+            </a>
+            <a
+              href="#projects"
               className="hover:text-blue-400 transition duration-300"
               onClick={() => setIsOpen(false)}
             >
               Projects
-            </Link>
+            </a>
             <Link
-              href="/contact"
+              href="#contact"
               className="hover:text-blue-400 transition duration-300"
               onClick={() => setIsOpen(false)}
             >
@@ -94,7 +94,7 @@ export default function Header() {
         </section>
 
         {/* About Section */}
-        <section className="py-16">
+        <section id='about' className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">About Me</h2>
             <Tabs aria-label="Tabs with icons" className='text-black max-w-[1320px] mx-auto' variant="underline">
@@ -172,7 +172,7 @@ export default function Header() {
                   </div>
                 </section>
               </TabItem>
-              <TabItem title="Skills" className='cursor-pointer' icon={GiSkills}>
+              <TabItem id='skills' title="Skills" className='cursor-pointer' icon={GiSkills}>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4 bg-gray-900 text-white p-4 rounded-lg">
                   {[
                     "HTML5",
@@ -231,7 +231,7 @@ export default function Header() {
                   </div>
                 </TabItem>
               </TabItem>
-              <TabItem title="Contacts" className='cursor-pointer' icon={HiClipboardList}>
+              <TabItem id='contact' title="Contacts" className='cursor-pointer' icon={HiClipboardList}>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   {/* Phone */}
                   <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
@@ -282,7 +282,7 @@ export default function Header() {
         </section>
 
         {/* Projects Section */}
-        <section className="bg-white py-16">
+        <section id='projects' className="bg-white py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -367,35 +367,7 @@ export default function Header() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-16 bg-gray-200">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Get in Touch</h2>
-            <form className="max-w-lg mx-auto space-y-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <textarea
-                placeholder="Your Message"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                rows="5"
-              ></textarea>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition duration-300"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </section>
+
       </main >
 
       {/* Footer */}
@@ -419,7 +391,6 @@ export default function Header() {
               <li><a href="#skills" className="hover:text-amber-400 transition">Skills</a></li>
               <li><a href="#projects" className="hover:text-amber-400 transition">Projects</a></li>
               <li><a href="#contact" className="hover:text-amber-400 transition">Contact</a></li>
-              <li><a href="#resume" className="hover:text-amber-400 transition">Resume</a></li>
             </ul>
           </div>
 
