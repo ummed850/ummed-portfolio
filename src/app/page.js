@@ -48,40 +48,47 @@ export default function Header() {
              md:static md:translate-x-0 md:h-auto md:w-auto md:bg-transparent md:flex md:flex-row md:items-center md:space-x-8`}
           >
             <ul className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 mt-16 md:mt-0">
-              <Link href="/" className="text-2xl font-bold flex items-center space-x-2 text-white hover:text-amber-300 transition duration-300">
+              <Link href="/" className="flex justify-center md:justify-start text-2xl font-bold flex items-center space-x-2 text-white hover:text-amber-300 transition duration-300">
                 <img
                   src="/images/UP Logo with Blue and White Color Palette (300 x 200 px).svg"
                   alt="Ummed Prajapat Logo"
-                  className="h-14 w-auto shadow-2xl md:hidden"
+                  className="h-14 w-auto shadow-2xl block md:hidden"
                 />
               </Link>
               <Link
                 href="/"
-                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                className="block px-4 py-2 hover:text-blue-400 mx-1.5 bg-amber-500 md:bg-transparent rounded-2xl transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <a
                 href="#about"
-                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                className="block px-4 py-2 hover:text-blue-400 bg-amber-500 mx-1.5  md:bg-transparent rounded-2xl transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </a>
               <a
                 href="#projects"
-                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                className="block px-4 py-2 hover:text-blue-400 bg-amber-500 mx-1.5 md:bg-transparent rounded-2xl transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Projects
               </a>
               <Link
                 href="#contact"
-                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                className="block px-4 py-2 hover:text-blue-400 bg-amber-500 mx-1.5 md:bg-transparent rounded-2xl transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
+              </Link>
+              <Link
+                href="/services"
+                className="block px-4 py-2 bg-amber-500 text-white md:bg-transparent rounded-2xl transition duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Services
               </Link>
             </ul>
           </div>
@@ -90,7 +97,7 @@ export default function Header() {
 
       <main className="bg-gray-100 min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gray-900 text-white py-12 px-6 md:px-16">
+        <section className="bg-gray-900 text-white pt-5 pb-20 md:py-22 px-6 md:px-16">
           <div className="max-w-7xl text-center md:text-left mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
 
             {/* Profile Image */}
@@ -106,7 +113,7 @@ export default function Header() {
             <div className='text-center md:text-left'>
               {/* Name & Title */}
               <h1 className="text-3xl md:text-4xl font-bold">Ummed prajapat</h1>
-              <p className="text-amber-400 text-xl md:text-lg mt-1">Full Stack (Mern Stack) Web Developer, Canva Pro</p>
+              <p className="text-amber-400 text-xl md:text-lg mt-4">Full Stack (Mern Stack) Web Developer, Canva Pro</p>
 
               {/* About */}
               <p className="text-gray-300 mt-4 leading-relaxed max-w-xl text-justify">
@@ -410,8 +417,8 @@ export default function Header() {
         </div>
 
         {/* Bottom Line */}
-        <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Ummed Prajapat. All Rights Reserved.
+        <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-200">
+          © {new Date().getFullYear()},All Rights Reserved By Ummed prajapat
         </div>
       </footer>
 
