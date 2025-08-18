@@ -43,135 +43,133 @@ export default function Header() {
 
           {/* Navigation Links */}
           <div
-            className={`${isOpen ? 'flex' : 'hidden'
-              } md:flex flex-col md:flex-row md:items-center absolute md:static top-16 left-0 w-full md:w-auto md:bg-transparent p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-8 transition-all duration-300 text-white bg-red-600 font-bold font-sans `}
+            className={`fixed top-0 left-0 h-screen w-64 bg-gray-800 text-white font-bold font-sans transform transition-transform duration-300 ease-in-out 
+            ${isOpen ? "translate-x-0" : "-translate-x-full"} 
+             md:static md:translate-x-0 md:h-auto md:w-auto md:bg-transparent md:flex md:flex-row md:items-center md:space-x-8`}
           >
-            <Link
-              href="/"
-              className="hover:text-blue-400 transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <a
-              href="#about"
-              className="hover:text-blue-400 transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="hover:text-blue-400 transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </a>
-            <Link
-              href="#contact"
-              className="hover:text-blue-400 transition duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
+            <ul className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 mt-16 md:mt-0">
+              <Link href="/" className="text-2xl font-bold flex items-center space-x-2 text-white hover:text-amber-300 transition duration-300">
+                <img
+                  src="/images/UP Logo with Blue and White Color Palette (300 x 200 px).svg"
+                  alt="Ummed Prajapat Logo"
+                  className="h-14 w-auto shadow-2xl md:hidden"
+                />
+              </Link>
+              <Link
+                href="/"
+                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              <a
+                href="#about"
+                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Projects
+              </a>
+              <Link
+                href="#contact"
+                className="block px-4 py-2 hover:text-blue-400 transition duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+            </ul>
           </div>
         </nav>
       </header>
 
       <main className="bg-gray-100 min-h-screen">
         {/* Hero Section */}
-        <section className=" text-white text-center grid grid-cols-1 md:grid-cols-[70%_auto]">
-          <div className=" border border-black py-4 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto px-2">
-            <img src='/images/banner1.png' className='h-[400px] w-[1080px]' />
-          </div>
-          <div>
-            <img
-              src="/images/umm.png"
-              alt="Ummed Prajapat"
-              className="w-full h-auto max-w-md mx-auto mt-8 md:mt-0"
-            />
+        <section className="bg-gray-900 text-white py-12 px-6 md:px-16">
+          <div className="max-w-7xl text-center md:text-left mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
+
+            {/* Profile Image */}
+            <div className="flex-shrink-0">
+              <img
+                src="/images/profileImg.jpg" // apni image ka path yahan dalna
+                alt="Profile"
+                className="w-40 h-40 md:w-[250px] md:h-[250px] object-cover rounded-full border-4 border-amber-500 shadow-lg"
+              />
+            </div>
+
+            {/* Profile Content */}
+            <div className='text-center md:text-left'>
+              {/* Name & Title */}
+              <h1 className="text-3xl md:text-4xl font-bold">Ummed prajapat</h1>
+              <p className="text-amber-400 text-xl md:text-lg mt-1">Full Stack (Mern Stack) Web Developer, Canva Pro</p>
+
+              {/* About */}
+              <p className="text-gray-300 mt-4 leading-relaxed max-w-xl text-justify">
+                I am a passionate developer specializing in building modern, responsive, and user-friendly web applications.
+                My focus is on crafting clean and efficient code while delivering engaging digital experiences.
+              </p>
+
+              {/* Skills */}
+              <div className="mt-5 flex flex-wrap gap-2 text-center">
+                {["React", "Next.js", "Node.js", "Tailwind CSS", "MongoDB", "JavaScript", "API", "Express JS"].map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-amber-500/20 text-amber-400 px-3 py-1 mx-1 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                <a
+                  href="/resume/ummedResume.pdf"
+                  download
+                  className="bg-amber-500 text-gray-900 px-5 py-2 rounded-full font-semibold hover:bg-amber-400 transition"
+                >
+                  Download CV
+                </a>
+                <a
+                  href="#contact"
+                  className="border border-amber-500 text-amber-400 px-5 py-2 rounded-full font-semibold hover:bg-amber-500 hover:text-gray-900 transition"
+                >
+                  Contact Me
+                </a>
+              </div>
+
+              {/* Social Links */}
+              <div className="mt-6 flex gap-5 text-2xl md:justify-start justify-center">
+                <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                  <FaLinkedin />
+                </a>
+                <a href="https://github.com/ummed850" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                  <FaGithub />
+                </a>
+                <a href="https://x.com/KumarUmmed6343" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                  <FaTwitter />
+                </a>
+                <a href="https://www.instagram.com/ummed.prajapat1/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
+                  < FaInstagram />
+                </a>
+
+              </div>
+            </div>
           </div>
         </section>
+
 
         {/* About Section */}
         <section id='about' className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">About Me</h2>
             <Tabs aria-label="Tabs with icons" className='text-black max-w-[1320px] mx-auto' variant="underline">
-              <TabItem active title="Profile" className='cursor-pointer' icon={HiUserCircle}>
-                <section className="bg-gray-900 text-white py-12 px-6 md:px-16">
-                  <div className="max-w-5xl text-center md:text-left mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
 
-                    {/* Profile Image */}
-                    <div className="flex-shrink-0">
-                      <img
-                        src="/images/profileImg.jpg" // apni image ka path yahan dalna
-                        alt="Profile"
-                        className="w-40 h-40 md:w-[250px] md:h-[250px] object-cover rounded-full border-4 border-amber-500 shadow-lg"
-                      />
-                    </div>
-
-                    {/* Profile Content */}
-                    <div>
-                      {/* Name & Title */}
-                      <h1 className="text-3xl md:text-4xl font-bold">Ummed prajapat</h1>
-                      <p className="text-amber-400 text-lg md:text-xl mt-1">Full Stack (Mern Stack) Web Developer, Canva Pro</p>
-
-                      {/* About */}
-                      <p className="text-gray-300 mt-4 leading-relaxed max-w-xl">
-                        I am a passionate developer specializing in building modern, responsive, and user-friendly web applications.
-                        My focus is on crafting clean and efficient code while delivering engaging digital experiences.
-                      </p>
-
-                      {/* Skills */}
-                      <div className="mt-5 flex flex-wrap gap-2 inline-block text-center">
-                        {["React", "Next.js", "Node.js", "Tailwind CSS", "MongoDB"].map((skill, idx) => (
-                          <span
-                            key={idx}
-                            className="bg-amber-500/20 text-amber-400 px-3 py-1 mx-1 rounded-full text-sm font-medium"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Buttons */}
-                      <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-                        <a
-                          href="/resume/ummedResume.pdf"
-                          download
-                          className="bg-amber-500 text-gray-900 px-5 py-2 rounded-full font-semibold hover:bg-amber-400 transition"
-                        >
-                          Download CV
-                        </a>
-                        <a
-                          href="#contact"
-                          className="border border-amber-500 text-amber-400 px-5 py-2 rounded-full font-semibold hover:bg-amber-500 hover:text-gray-900 transition"
-                        >
-                          Contact Me
-                        </a>
-                      </div>
-
-                      {/* Social Links */}
-                      <div className="mt-6 flex gap-5 text-2xl md:justify-start justify-center">
-                        <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
-                          <FaLinkedin />
-                        </a>
-                        <a href="https://github.com/ummed850" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
-                          <FaGithub />
-                        </a>
-                        <a href="https://x.com/KumarUmmed6343" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
-                          <FaTwitter />
-                        </a>
-                        <a href="https://www.instagram.com/ummed.prajapat1/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400">
-                          < FaInstagram />
-                        </a>
-
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </TabItem>
               <TabItem id='skills' title="Skills" className='cursor-pointer' icon={GiSkills}>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4 bg-gray-900 text-white p-4 rounded-lg">
                   {[
@@ -231,7 +229,7 @@ export default function Header() {
                   </div>
                 </TabItem>
               </TabItem>
-              <TabItem id='contact' title="Contacts" className='cursor-pointer' icon={HiClipboardList}>
+              <TabItem id='contacts' title="Contacts" className='cursor-pointer' icon={HiClipboardList}>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   {/* Phone */}
                   <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
