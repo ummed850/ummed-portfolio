@@ -23,7 +23,19 @@ export default function ProjectsPage() {
             image: "/imgProjects/React-projects.png",
             link: "https://ecom-react-theta.vercel.app/",
         },
-        // 👉 Add more projects here
+        {
+            title: "One Page (Html + CSS)",
+            description:
+                "A simple one-page website built with HTML and CSS, showcasing a clean design.",
+            image: "/imgProjects/one-Page.png",
+            link: "https://html-ummed-one-page.vercel.app/",
+        },
+        {
+            title: "Shadi.com (HTML + CSS,Tailwind CSS)",
+            description: "A matrimonial website built with HTML, CSS, and Tailwind CSS, featuring a modern design.",
+            image: "/imgProjects/shadi-website.png",
+            link: "https://shadi-website-nu.vercel.app/",
+        },
     ];
 
     return (

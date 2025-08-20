@@ -143,7 +143,7 @@ export default function Header() {
                   Download CV
                 </a>
                 <a
-                  href="#contact"
+                  href="tel:+919876543210"
                   className="border border-amber-500 text-amber-400 px-5 py-2 rounded-full font-semibold hover:bg-amber-500 hover:text-gray-900 transition"
                 >
                   Contact Me
@@ -412,6 +412,7 @@ export default function Header() {
               <a href="https://github.com/ummed850" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl">🐙</a>
               <a href="https://www.linkedin.com/in/ummed-prajapat-698a69299/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl">💼</a>
               <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl">🐦</a>
+              <a href="https://www.instagram.com/ummed.prajapat1/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-xl items-center flex"><FaInstagram /></a>
             </div>
           </div>
         </div>
