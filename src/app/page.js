@@ -143,7 +143,7 @@ export default function Header() {
                   Download CV
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919216940489"
                   className="border border-amber-500 text-amber-400 px-5 py-2 rounded-full font-semibold hover:bg-amber-500 hover:text-gray-900 transition"
                 >
                   Contact Me
