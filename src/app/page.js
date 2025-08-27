@@ -294,18 +294,19 @@ export default function Header() {
               {/* Project Card Example */}
               <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src="imgProjects/Ecomm-js.png"
+                  src="imgProjects/furniture-website.png"
                   alt="Project 1"
                   className="w-full h-48 object-cover py-2.5 px-3.5  rounded-[10px] border border-gray-300"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900">Ecom-Web</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">Monsta Furniture (MERN Stack)</h3>
                   <p className="text-gray-700 mt-2">
-                    This web application Ecomerce  [A web app built with HTML ,CSS and JavaScript and Use Api]
+                    A full-stack Furniture E-Commerce website built with MERN Stack. Features include product listing, add to cart, user authentication, and custom APIs.{" "}
+                    <p className='font-bold'> (Currently work in progress with more features under development.)</p>
                   </p>
                   <div className="text-center">
                     <Link
-                      href="https://ecomm-in-js.vercel.app/"
+                      href="https://wscubetech.co/Assignments/furniture/"
                       className="py-1.5 px-3.5 inline-block rounded-xl text-center bg-amber-500 mt-4 text-blue-800 hover:text-blue-700"
                     >
                       View Details

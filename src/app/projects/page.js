@@ -3,6 +3,17 @@ import Link from "next/link";
 export default function ProjectsPage() {
     const projects = [
         {
+            title: "Monsta Furniture (MERN Stack)",
+            description: (
+                <>
+                    A full-stack Furniture E-Commerce website built with MERN Stack. Features include product listing, add to cart, user authentication, and custom APIs.{" "}
+                    <strong>(Currently work in progress with more features under development.)</strong>
+                </>
+            ),
+            image: "/imgProjects/furniture-website.png", // apna screenshot yaha dalna hoga
+            link: "https://wscubetech.co/Assignments/furniture/",
+        },
+        {
             title: "Ecom-Web (HTML, CSS, JS)",
             description:
                 "A modern e-commerce application built with HTML, CSS, and JavaScript. Integrated APIs for product data.",
